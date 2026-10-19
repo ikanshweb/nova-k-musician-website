@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA K | Official Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="logo">NOVA K</div>
+        <nav>
+            <a href="#music">Music</a>
+            <a href="#shows">Shows</a>
+            <a href="#book">Book</a>
+        </nav>
+    </header>
+
+    <!-- Hero: artist name big and bold -->
+    <section class="hero">
+        <p class="tag">Singer · Producer · Delhi</p>
+        <h1>NOVA K</h1>
+        <p class="sub">New single <strong>"Midnight Metro"</strong> out now</p>
+        <div class="links">
+            <a href="#" class="btn">▶ Listen on Spotify</a>
+            <a href="#" class="btn outline">Watch on YouTube</a>
+        </div>
+    </section>
+
+    <!-- Releases: cards built by script.js -->
+    <section id="music" class="section">
+        <h2>Releases</h2>
+        <div class="grid" id="releaseGrid"></div>
+    </section>
+
+    <!-- Upcoming shows list, also built by script.js -->
+    <section id="shows" class="section">
+        <h2>Upcoming Shows</h2>
+        <div id="showList"></div>
+    </section>
+
+    <!-- Booking / collab form -->
+    <section id="book" class="section">
+        <h2>Bookings & Collabs</h2>
+        <form id="bookForm">
+            <input type="text" id="bName" placeholder="Your name / brand" required>
+            <input type="email" id="bEmail" placeholder="Email" required>
+            <select id="bType" required>
+                <option value="">What's this about?</option>
+                <option>Live show</option>
+                <option>Brand collab</option>
+                <option>Feature / collab track</option>
+                <option>Other</option>
+            </select>
+            <textarea id="bMsg" rows="4" placeholder="Tell me more..." required></textarea>
+            <button type="submit" class="btn">Send Enquiry</button>
+        </form>
+        <p id="bookMsg"></p>
+    </section>
+
+    <footer>
+        <div class="socials">
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Spotify</a>
+        </div>
+        <p>© 2026 NOVA K · Website by Ikansh</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+/* Dark theme: change these 4 colours to re-brand for any artist */
+:root {
+    --bg: #0d0d12;
+    --text: #f2f2f2;
+    --accent: #b388ff;
+    --card: #1a1a24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: rgba(13, 13, 18, .85);
+    backdrop-filter: blur(10px);
+    /* frosted glass effect */
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 18px;
+    opacity: .8;
+}
+
+.nav a:hover {
+    opacity: 1;
+    color: var(--accent);
+}
+
+/* Hero with a glowing purple gradient background */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(circle at 50% 40%, #3a1f6b 0%, var(--bg) 65%);
+}
+
+.tag {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    opacity: .7;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin: 10px 0;
+}
+
+.sub {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 6px;
+    padding: 12px 26px;
+    border-radius: 30px;
+    background: var(--accent);
+    color: #000;
+    border: 2px solid var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn.outline {
+    background: transparent;
+    color: var(--accent);
+}
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.release {
+    background: var(--card);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform .2s;
+    /* smooth lift on hover */
+}
+
+.release:hover {
+    transform: translateY(-6px);
+}
+
+.cover {
+    height: 200px;
+}
+
+/* colour set by JS for each release */
+.release-info {
+    padding: 16px;
+}
+
+.release-info span {
+    font-size: .85rem;
+    opacity: .6;
+}
+
+.show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px 0;
+    border-bottom: 1px solid #2a2a36;
+}
+
+.show .date {
+    color: var(--accent);
+    font-weight: 700;
+    min-width: 90px;
+}
+
+form {
+    display: grid;
+    gap: 14px;
+    max-width: 480px;
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid #333;
+    font-family: inherit;
+}
+
+#bookMsg {
+    text-align: center;
+    margin-top: 14px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #2a2a36;
+    opacity: .8;
+}
+
+.socials a {
+    color: var(--text);
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+
+    .nav a {
+        margin-left: 10px;
+        font-size: .9rem;
+    }
+}
